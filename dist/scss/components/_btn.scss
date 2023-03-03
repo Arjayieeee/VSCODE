@@ -1,0 +1,7 @@
+.btn{
+    background-color: $clr-primary;
+    color: $clr-light;
+    &:hover{
+        background-color: $clr-primary-dark;
+    }
+}

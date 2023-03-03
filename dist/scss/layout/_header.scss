@@ -1,0 +1,155 @@
+.header{
+    background-color: $clr-dark;
+    z-index: 999;
+    width: 100%;
+    
+    &__wrapper{
+        @include mediaQuery($desktop){
+            display: flex;
+            justify-content: space-between;
+        }
+        height: 6rem;
+        .branding{
+            @include centerAll;
+            width: 20rem;
+            gap: 1rem;
+            
+            img{
+                width: 4rem;
+            }
+            h3{
+                width: 20rem;
+                a{
+                    color: $clr-light;
+                }
+            }
+        }
+        .header__nav{
+            z-index: -1;
+            position: absolute;
+            top: -100rem;
+            left: 0;
+            background-color: $clr-dark;
+            width: 100vw;
+            width: 100%;
+            height: 100%;
+            transition: .7s ease;
+            max-height: 36.8rem;
+            @include mediaQuery($desktop){
+                background-color: unset;
+                top: 0;
+                z-index: unset;
+                display: flex;
+                gap: 5rem;
+                position: unset;
+                width: 100%;
+                overflow: hidden;
+            }
+            ul{
+                @include mediaQuery($desktop){
+                    display: flex;
+                }
+                li{
+                    margin: 2rem;
+                    @include mediaQuery($desktop){
+                        margin: 2rem;
+
+                    }
+                    a{
+                        color: $clr-light;
+                        @include mediaQuery($desktop){
+                            color: $clr-gray;
+                            font-size: 1.5rem;
+
+                            &:hover{
+                                color: $clr-light;
+                            }
+                        }
+                    }
+                }
+            }
+            .header__search{
+                display: flex;
+                flex-direction: column;
+                color: $clr-light;
+                @include mediaQuery($desktop){
+                    display: grid;
+                    @include grid(2, 0rem);
+                    height: 100%;
+                    max-height: 7rem;
+                    position: relative;
+                }
+                input{
+                    margin: 0 0 1rem 2rem;
+                    &::placeholder{
+                        color: $clr-light;
+                    }
+                    @include mediaQuery($desktop){
+                        background-color: #3D3D42;
+                        padding: 1.9rem;
+                        padding-left: 2.5rem;
+
+
+                    }
+                }
+                a{
+                    padding: 3rem;
+                    display: inline-block;
+                    position: relative;
+                    @include mediaQuery($desktop){
+                        font-size: 1.5rem;
+                        height: 6rem;
+                        padding: 2rem;
+                        padding-left: 2.5rem;
+
+                        .fa-arrow-down-long{
+                            position: absolute;
+                            top: 2rem;
+                            left: 1rem;
+                        }
+                    }
+                    
+                }
+                .fa-magnifying-glass{
+
+                    display: none;
+                    @include mediaQuery($desktop){
+                        display: block;
+                        position: absolute;
+                        top: 2rem;
+                        left: 2.5rem;
+                    }
+                }
+            }
+            &.open{
+                top: 5rem;
+                overflow-y: scroll;
+                @include mediaQuery($desktop){
+                    max-height: 36rem;
+                    overflow-y: hidden;
+                }
+            }
+        }  
+
+        .toggle__menu{
+            position: absolute;
+            right: 3rem;
+            top: 2rem;
+            display: block;
+            @include mediaQuery($desktop){
+                display: none;
+
+            }
+            span{
+                width: 3.5rem;
+                height: .3rem;
+                background-color: $clr-light;
+                margin-bottom: .5rem;
+                display: block;
+                border-radius: 4rem;
+                transition: 1s ease;
+            }
+        }
+    }
+        
+    }

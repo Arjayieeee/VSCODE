@@ -1,0 +1,104 @@
+.updates{
+    background-color:#25252b;
+
+    &__wrapper{
+       p{
+        color: $clr-light;
+        text-align: center;
+        margin-bottom: 0;
+        font-size: 1.5rem;
+        padding: .5rem 4rem;
+            a{
+                color: #2267f2;
+            }
+       }
+    }
+}
+
+.updates__banner{
+    background-color:$clr-dark ;
+
+    &__wrapper{
+        h3{
+            padding-top: 1rem;
+            font-size: 4rem;
+            text-align: center;
+            color:$clr-light;
+            font-weight: 100;
+        }
+        h2
+        {
+            color: $clr-light;
+            text-align: center;
+            font-weight: 500;
+            font-size: 4rem;
+        }
+        p{
+            color: $clr-light;
+            text-align: center;
+            font-weight: 50;
+            font-size: 1.5rem;
+            opacity: 70%;
+        }
+    }
+    .bot{
+        justify-content: center;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        
+        a:first-child{
+            align-self: center;
+                span{
+                    line-height: 1;
+                    display: block;
+                    text-align: center;
+                    &:last-child{
+                        font-size: 1rem;
+                        margin: .6rem 0;
+                
+                    }
+                }
+
+        }  
+    }
+
+    .platforms{
+        
+        .plt{
+            color: $clr-light;
+            font-size: 1.5rem;
+            text-align: center;
+            background-color: #25252b;
+            border-radius: 1rem;
+           
+            a{
+                color:#2267f2;
+                font-size: 1.5rem;
+                
+                    &:hover{
+                        text-decoration: underline;
+                    }
+            }
+            
+        }
+        p{
+            color: $clr-light;
+            text-align: center;
+            font-size: 1.1rem;
+            opacity: 80%;
+                span{
+                    display: block;
+                        a{
+                            color: #2267f2;
+                            &:hover{
+                                text-decoration: underline;
+                            }
+                        }
+                }
+        }
+        
+    }
+
+}

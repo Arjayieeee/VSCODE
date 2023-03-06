@@ -5,8 +5,9 @@
     
     &__wrapper{
         @include mediaQuery($desktop){
-            display: flex;
-            justify-content: space-between;
+        @include centerAll;
+        padding: 1rem;
+            
         }
         height: 6rem;
         .branding{
@@ -16,16 +17,21 @@
             
             img{
                 width: 4rem;
+                padding-top: 1.8rem;
             }
             h3{
                 width: 20rem;
+                text-align: center;
+            padding-top: 1rem;
                 a{
                     color: $clr-light;
+                    
+
                 }
             }
         }
         .header__nav{
-            z-index: -1;
+            z-index: 1;
             position: absolute;
             top: -100rem;
             left: 0;
@@ -47,7 +53,7 @@
             }
             ul{
                 @include mediaQuery($desktop){
-                    display: flex;
+                    @include centerAll;
                 }
                 li{
                     margin: 2rem;
@@ -74,38 +80,40 @@
                 color: $clr-light;
                 @include mediaQuery($desktop){
                     display: grid;
+                    align-items: center;
                     @include grid(2, 0rem);
                     height: 100%;
-                    max-height: 7rem;
+                    max-height: 1rem;
                     position: relative;
                 }
                 input{
                     margin: 0 0 1rem 2rem;
+                    padding: 1rem;
                     &::placeholder{
                         color: $clr-light;
                     }
                     @include mediaQuery($desktop){
                         background-color: #3D3D42;
-                        padding: 1.9rem;
+                       
                         padding-left: 2.5rem;
 
 
                     }
                 }
                 a{
-                    padding: 3rem;
+                    padding: 1rem;
                     display: inline-block;
                     position: relative;
                     @include mediaQuery($desktop){
                         font-size: 1.5rem;
-                        height: 6rem;
-                        padding: 2rem;
-                        padding-left: 2.5rem;
+                        height: 5.2rem;
+                        padding: 1.5rem;
+                        padding-left: 1.7rem;
 
                         .fa-arrow-down-long{
                             position: absolute;
-                            top: 2rem;
-                            left: 1rem;
+                            top: 1.7rem;
+                            left: .5rem;
                         }
                     }
                     
@@ -116,13 +124,13 @@
                     @include mediaQuery($desktop){
                         display: block;
                         position: absolute;
-                        top: 2rem;
+                        top: 1.6rem;
                         left: 2.5rem;
                     }
                 }
             }
             &.open{
-                top: 5rem;
+                top: 1rem;
                 overflow-y: scroll;
                 @include mediaQuery($desktop){
                     max-height: 36rem;
@@ -132,6 +140,7 @@
         }  
 
         .toggle__menu{
+            z-index: 2;
             position: absolute;
             right: 3rem;
             top: 2rem;
@@ -148,6 +157,7 @@
                 display: block;
                 border-radius: 4rem;
                 transition: 1s ease;
+                
             }
         }
     }

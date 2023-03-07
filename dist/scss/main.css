@@ -797,56 +797,248 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   }
 }
 
-.slide {
-  padding: 5rem 0;
-  background-color: #f5f5f5;
+.feedback {
+  background-color: rgb(233, 229, 229);
 }
-.slide .mySlides {
+.feedback .feed_wrapper {
   display: flex;
   padding: 0 2rem;
 }
-.slide .name {
+.feedback .feed_content {
   display: flex;
   position: relative;
+  padding-left: 3rem;
 }
-.slide .name img {
-  border-radius: 50%;
+.feedback .feed_content img {
+  border-radius: 12rem;
+  height: 6.2rem;
+  width: 6.2rem;
   margin: 0 1.5rem;
-  height: 5rem;
 }
-.slide .slide__text p {
-  margin-bottom: 3rem;
+.feedback .feed_text {
+  max-height: 99rem;
 }
-.slide .slide__text .slide__names {
+.feedback .feed_text .feed_name {
   display: flex;
   justify-content: space-between;
 }
-.slide .slide__text .slide__names i {
-  color: #dededf;
+.feedback .feed_text .feed_name i {
+  color: gray;
 }
-.slide .slideshow-container {
+.feedback .feed_text h5 {
+  font-size: 1rem;
+  color: grey;
+}
+.feedback .feed_text a {
+  color: #007be0;
+}
+.feedback .feed_text a:hover {
+  text-decoration: underline;
+}
+.feedback .tns-outer {
   position: relative;
-  background: #f5f5f5;
 }
-.slide .slideshow-container .prev, .slide .slideshow-container .next {
-  cursor: pointer;
+.feedback .tns-controls {
   position: absolute;
   top: 50%;
-  width: auto;
-  margin-top: -30px;
-  color: #888;
-  font-weight: bold;
-  font-size: 20px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  transition: 0.2s ease;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+  min-width: 45rem;
 }
-.slide .slideshow-container .next {
-  position: absolute;
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.feedback .tns-controls button {
+  border: none;
+  font-size: 2rem;
 }
-.slide .slideshow-container .prev:hover, .slide .slideshow-container .next:hover {
-  color: black;
+
+.about .items {
+  padding: 5rem 3rem;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (min-width: 120rem) {
+  .about .items {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 15rem;
+  }
+}
+.about .items__image img {
+  width: 35rem;
+}
+.about .items__text {
+  text-align: left;
+}
+@media screen and (min-width: 120rem) {
+  .about .items__text {
+    max-width: 60rem;
+    padding: 0 -5rem;
+  }
+}
+.about .items__text h3 {
+  font-size: 2rem;
+  font-weight: lighter;
+  margin: 2rem 0;
+}
+.about .items__text p {
+  font-size: 1.7rem;
+  line-height: 4rem;
+}
+.about .items__text p a {
+  color: #0066B8;
+}
+.about .items__text p a:hover {
+  color: #0059a1;
+  text-decoration: underline;
+}
+
+#debug {
+  background-color: #f5f5f5;
+}
+@media screen and (min-width: 120rem) {
+  #debug {
+    background-color: #f5f5f5;
+    width: 100%;
+    flex-direction: row-reverse;
+    gap: 15rem;
+  }
+}
+
+#extension {
+  background-color: #f5f5f5;
+}
+@media screen and (min-width: 120rem) {
+  #extension {
+    background-color: #f5f5f5;
+    width: 100%;
+    flex-direction: row-reverse;
+    gap: 15rem;
+  }
+}
+#extension img {
+  transition: 0.5s ease;
+}
+#extension img:hover {
+  transform: scale(1.05);
+  transition: 0.5s ease;
+}
+
+.languages {
+  background-color: #E9E5E5;
+}
+.languages .languages__wrapper {
+  padding: 6rem 0;
+}
+.languages .languages__wrapper .programming__language h3 {
+  padding-bottom: 4rem;
+  font-size: 2.8rem;
+  text-align: center;
+  font-weight: 100;
+}
+.languages .languages__wrapper .programming__language .platforms ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media screen and (min-width: 120rem) {
+  .languages .languages__wrapper .programming__language .platforms ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1rem -10rem;
+  }
+}
+.languages .languages__wrapper .programming__language .platforms ul li {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+.languages .languages__wrapper .programming__language .platforms ul li img {
+  width: 4rem;
+  padding-top: -0.5rem;
+}
+.languages .languages__wrapper .programming__language .platforms a {
+  display: block;
+  text-align: center;
+  color: #007be0;
+  font-size: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+.languages .languages__wrapper .programming__language .platforms a:hover {
+  text-decoration: underline;
+  font-size: 2rem;
+}
+.languages .languages__wrapper .programming__language .button {
+  display: block;
+  text-align: center;
+  justify-content: center;
+  margin: 4rem 0;
+}
+.languages .languages__wrapper .programming__language .button a {
+  font-size: 2.8rem;
+  font-weight: 700;
+  padding: 1.5rem 3.5rem;
+}
+
+.os {
+  padding: 6rem 0;
+}
+@media screen and (min-width: 120rem) {
+  .os__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+  }
+}
+.os__wrapper .os__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 3rem 0;
+}
+.os__wrapper .os__item img {
+  width: 10rem;
+  margin-bottom: 2rem;
+}
+.os__wrapper .os__item a {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.os__wrapper .os__item a small {
+  font-size: 1rem;
+}
+.os__wrapper .os__item table:last-child {
+  height: 7rem;
+}
+.os__wrapper .os__item table {
+  height: 11rem;
+}
+.os__wrapper .os__item table tr td:first-child {
+  text-align: center;
+}
+.os__wrapper .os__item table tr td h4 {
+  margin-right: 1rem;
+  font-weight: 600;
+}
+.os__wrapper .os__item table tr td a {
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  padding: 0 0.3rem;
+  margin-right: 0.4rem;
+}
+.os__wrapper .os__item .os__btn {
+  display: flex;
+  gap: 0.5rem;
+}
+.os__wrapper .os__item .os__btn a:first-child {
+  padding: 1rem 2.5rem;
+}
+.os__wrapper .os__item .os__btn a:last-child {
+  padding: 1rem 1.5rem;
+}
+.os__wrapper .os__item:last-child {
+  margin-top: -1rem;
 }/*# sourceMappingURL=main.css.map */

@@ -80,3 +80,10 @@
   border: 1px solid #2552dd ;
   display: inline-block;
 }
+
+@mixin mediaQuerytablet($width){
+  @media screen and (max-width:$width) {
+    @content;
+    
+  }
+}

@@ -518,6 +518,12 @@
 .os{
     padding: 6rem 0;
     &__wrapper{
+        @include mediaQuerytablet($tablet){
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center
+        }
         @include mediaQuery($desktop){
             @include grid(3, 1rem);
         }
@@ -525,7 +531,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
+            flex-direction: column;    
             margin: 3rem 0;
                 img{
                     width: 10rem;
@@ -580,5 +586,80 @@
             margin-top: -1rem;
         }
         
+    }
+}
+
+
+// FEATURES
+
+.features {
+    background-color: rgb(218, 214, 214);
+    padding: 3rem 7.5rem;
+    width: 100%;
+    @media screen and (min-width: 120rem){
+        background-color: rgb(211, 207, 207);
+    }
+
+    &__wrapper{
+        text-align: center;
+    
+        .features__head{
+            @include mediaQuery($desktop){
+                @include grid(2, 1rem);
+            }
+            .features__left{
+                margin: 3rem 0;
+                margin-bottom: 7rem;
+                h2{
+                    font-size: 2rem;
+                    margin-bottom: 1rem;
+                    font-weight: 500;
+                }
+                p{
+                    font-weight: 100;
+                }
+            }
+            .features__right{
+                margin: 3rem 0;
+                margin-bottom: 7rem;
+                h2{
+                    font-size: 2rem;
+                    margin-bottom: 1rem;
+                    font-weight: 500;
+                    a{
+                        color: rgb(18, 18, 252);
+                        &:hover{
+                            text-decoration-line: underline;
+                        }
+                    }
+                }
+                p{
+                    font-weight: 100;
+                }
+            }
+        }
+
+        .features__bottom{
+            @include mediaQuery($desktop){
+                width: 60rem;
+                margin: 0 auto;
+            }
+            h2{
+                font-weight: 500;
+                color: $clr-dark;
+                margin-bottom: 2rem;
+            }
+            p{
+                line-height: 3;
+                font-size: 1.19rem;
+                color: $clr-dark;
+                a{
+                    color: rgb(18, 18, 252);
+                    &:hover{
+                        text-decoration-line: underline;
+                    }
+                }
+            }
+        }
     }
 }
